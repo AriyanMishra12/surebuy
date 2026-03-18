@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist/spa",
   },
   plugins: [react(), expressPlugin()],
+  base: process.env.VITE_BASE_PATH || "/surebuy",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
